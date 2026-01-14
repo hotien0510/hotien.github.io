@@ -7,10 +7,18 @@
   <style>
     body {
   font-family: Arial, sans-serif;
-  background: url("manu.png") no-repeat center center fixed;
-  background-size: cover;
-  margin: 0;
-  padding: 0;
+  background: .container {
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.85);
+  border-radius: 20px;
+  z-index: -1;
+}
 }
 
     .card {
@@ -56,4 +64,5 @@
   </div>
 </body>
 </html>
+
 
