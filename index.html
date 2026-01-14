@@ -5,21 +5,41 @@
   <title>Bio Link</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    body {
+   /* NỀN NGOÀI */
+body {
   font-family: Arial, sans-serif;
-  background: .container {
-  position: relative;
+  background: #f2f2f2;
+  margin: 0;
 }
 
+/* KHUNG BIO */
+.container {
+  position: relative;
+  max-width: 380px;
+  margin: 80px auto;
+  padding: 30px;
+  border-radius: 20px;
+
+  background: url("manu.png") center / cover no-repeat;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* LỚP PHỦ TRẮNG MỜ */
 .container::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(255,255,255,0.85);
   border-radius: 20px;
-  z-index: -1;
+  z-index: 0;
 }
+
+/* ĐẢM BẢO NỘI DUNG NẰM TRÊN LỚP PHỦ */
+.container * {
+  position: relative;
+  z-index: 1;
 }
+
 
     .card {
       max-width: 400px;
